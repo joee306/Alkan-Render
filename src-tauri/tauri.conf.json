@@ -1,0 +1,42 @@
+{
+    "build": {
+        "beforeDevCommand": "npm run dev",
+        "beforeBuildCommand": "npm run build",
+        "devPath": "http://localhost:1420",
+        "distDir": "../dist",
+        "withGlobalTauri": false
+    },
+    "package": {
+        "productName": "alkan_render",
+        "version": "0.0.0"
+    },
+    "tauri": {
+        "allowlist": {
+            "all": true,
+            "shell": {
+                "all": false,
+                "open": true
+            }
+        },
+        "bundle": {
+            "active": true,
+            "targets": "all",
+            "identifier": "de.dennis.dev",
+            "icon": [
+                "icons/128x128.png"
+            ]
+        },
+        "security": {
+            "csp": null
+        },
+        "windows": [
+            {
+                "fullscreen": false,
+                "resizable": true,
+                "title": "Alkan Render",
+                "width": 800,
+                "height": 600
+            }
+        ]
+    }
+}
